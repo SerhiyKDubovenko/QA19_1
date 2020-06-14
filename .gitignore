@@ -1,2 +1,5 @@
 /.idea/
 /target/
+/src/main/java/resources/YKconfEXDB.txt
+/src/main/java/logic/users/db_yk/YKConfig.java
+/src/main/java/logic/users/db_yk/YKConfig.java

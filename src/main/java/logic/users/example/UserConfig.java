@@ -44,13 +44,49 @@ public class UserConfig {
         this.port = port;
     }
 
+    public String getUser() {
+        return user;
+    }
 
+    public void setUser(String user) {
+        this.user = user;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getDb() {
+        return db;
+    }
+
+    public void setDb(String db) {
+        this.db = db;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
+    }
 
     public static void main(String[] args) {
 
-        String filePath = "C:\\Users\\pp\\IdeaProjects\\QA19_1_1\\src\\main\\java\\resources";
+        String filePath = "C:\\Users\\User\\IdeaProjects\\QA19_1\\src\\main\\java\\resources";
         String fileName = "confEXDB.txt";
 
         FileManager.writeFile(new File(filePath, fileName),

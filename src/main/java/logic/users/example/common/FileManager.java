@@ -41,7 +41,7 @@ public class FileManager {
 /*
 
 
-        File n = new File("C:\\Users\\pp\\IdeaProjects\\QA19_1_1\\src\\main\\java\\resources", "Fileshka");
+          File n = new File("C:\\Users\\pp\\IdeaProjects\\QA19_1_1\\src\\main\\java\\resources", "Fileshka");
         writeFile(n, "Test text");
 
         System.out.println( writeFile(new File("C:\\Users\\pp\\IdeaProjects\\QA19_1_1\\src\\main\\java\\resources", "Fileshka")));

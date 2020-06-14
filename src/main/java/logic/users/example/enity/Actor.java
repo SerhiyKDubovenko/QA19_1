@@ -35,4 +35,52 @@ public class Actor {
         this.yearOfBirth = yearOfBirth;
         this.countryKey = countryKey;
     }
+
+    public String getActorID() {
+        return actorID;
+    }
+
+    public void setActorID(String actorID) {
+        this.actorID = actorID;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getMidlename() {
+        return midlename;
+    }
+
+    public void setMidlename(String midlename) {
+        this.midlename = midlename;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(String yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public String getCountryKey() {
+        return countryKey;
+    }
+
+    public void setCountryKey(String countryKey) {
+        this.countryKey = countryKey;
+    }
 }

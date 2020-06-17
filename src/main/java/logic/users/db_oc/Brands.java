@@ -1,4 +1,4 @@
-package logic.users.oleh;
+package logic.users.db_oc;
 
 import lombok.Data;
 

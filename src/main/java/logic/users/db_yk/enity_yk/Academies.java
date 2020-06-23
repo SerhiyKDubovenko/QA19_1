@@ -1,11 +1,15 @@
 package logic.users.db_yk.enity_yk;
+
 import lombok.Data;
 
-@Data
 
+
+
+
+@Data
 public class Academies {
-private String AcademyID;
-    private String AcademyName;
+    private String  AcademyID;
+    private String  AcademyName;
     private String CountryKey;
     private String CityKey;
 
@@ -24,4 +28,36 @@ private String AcademyID;
         CountryKey = countryKey;
         CityKey = cityKey;
     }
+    public String getAcademyID() {
+        return AcademyID;
+    }
+
+    public void setAcademyID(String academyID) {
+        AcademyID = academyID;
+    }
+
+    public String getAcademyName() {
+        return AcademyName;
+    }
+
+    public void setAcademyName(String academyName) {
+        AcademyName = academyName;
+    }
+
+    public String getCountryKey() {
+        return CountryKey;
+    }
+
+    public void setCountryKey(String countryKey) {
+        CountryKey = countryKey;
+    }
+
+    public String getCityKey() {
+        return CityKey;
+    }
+
+    public void setCityKey(String cityKey) {
+        CityKey = cityKey;
+    }
+
 }

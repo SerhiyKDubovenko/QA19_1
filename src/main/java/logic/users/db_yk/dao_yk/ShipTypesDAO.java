@@ -6,7 +6,7 @@ import logic.users.db_yk.enity_yk.Shipyard;
 import java.util.List;
 
 public interface ShipTypesDAO {
-    List<ShipTypes> getShipyTypesList();
+    List<ShipTypes> getShipTypesList();
     boolean updateShipTypes(ShipTypes shipTypes);
     boolean deleteShipTypes(ShipTypes shipyTypes);
     boolean addShipTypes(ShipTypes shipTypes);

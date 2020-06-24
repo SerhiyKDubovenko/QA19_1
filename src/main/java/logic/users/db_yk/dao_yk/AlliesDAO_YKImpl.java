@@ -1,7 +1,7 @@
 package logic.users.db_yk.dao_yk;
 
 import logic.users.db_yk.enity_yk.Allies;
-import logic.users.db_yk.enity_yk.Shipyard;
+
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

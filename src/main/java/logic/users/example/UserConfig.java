@@ -86,8 +86,9 @@ public class UserConfig {
 
     public static void main(String[] args) {
 
+
         String filePath = "C:\\Users\\User\\IdeaProjects\\QA19_1\\src\\main\\java\\resources";
-        String fileName = "confEXDB.txt";
+        String fileName = "YKconfEXDB.txt";
 
         FileManager.writeFile(new File(filePath, fileName),
                 new Gson().toJson(new UserConfig("u401146528_EX",

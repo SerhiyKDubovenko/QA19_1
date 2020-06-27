@@ -1,0 +1,1 @@
+{"user":"u401146528_EX","password":"/fIE/mi\u0026","host":"sql222.main-hosting.eu","db":"u401146528_EX","port":"3306"}

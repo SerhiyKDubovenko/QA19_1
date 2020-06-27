@@ -2,6 +2,10 @@ package logic.users.db_yk.enity_yk;
 
 import lombok.Data;
 
+
+
+
+
 @Data
 public class Academies {
     private String  AcademyID;
@@ -24,7 +28,6 @@ public class Academies {
         CountryKey = countryKey;
         CityKey = cityKey;
     }
-
     public String getAcademyID() {
         return AcademyID;
     }
@@ -56,4 +59,5 @@ public class Academies {
     public void setCityKey(String cityKey) {
         CityKey = cityKey;
     }
+
 }

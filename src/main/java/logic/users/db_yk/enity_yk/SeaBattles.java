@@ -5,36 +5,36 @@ import lombok.Data;
 @Data
 
 public class SeaBattles {
-    private String SeaBattlesID;
-    private String SeaBattles;
-    private String CoanflictKey;
-    private String CoalitionKey;
-    private String CountryKey;
-    private String FleetKey;
-    private String Year;
-    private String Winner;
+    private String seaBattlesID;
+    private String seaBattles;
+    private String coanflictKey;
+    private String coalitionKey;
+    private String countryKey;
+    private String fleetKey;
+    private String year;
+    private String winner;
 
     public SeaBattles() {
     }
 
     public SeaBattles(String seaBattlesID, String seaBattles, String coanflictKey, String coalitionKey, String countryKey, String fleetKey, String year, String winner) {
-        SeaBattlesID = seaBattlesID;
-        SeaBattles = seaBattles;
-        CoanflictKey = coanflictKey;
-        CoalitionKey = coalitionKey;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
-        Year = year;
-        Winner = winner;
+        seaBattlesID = seaBattlesID;
+        seaBattles = seaBattles;
+        coanflictKey = coanflictKey;
+        coalitionKey = coalitionKey;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
+        year = year;
+        winner = winner;
     }
 
     public SeaBattles(String seaBattles, String coanflictKey, String coalitionKey, String countryKey, String fleetKey, String year, String winner) {
-        SeaBattles = seaBattles;
-        CoanflictKey = coanflictKey;
-        CoalitionKey = coalitionKey;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
-        Year = year;
-        Winner = winner;
+        seaBattles = seaBattles;
+        coanflictKey = coanflictKey;
+        coalitionKey = coalitionKey;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
+        year = year;
+        winner = winner;
     }
 }

@@ -4,37 +4,37 @@ import lombok.Data;
 
 @Data
 public class Comandors {
-private String ComandorID;
-private String ComandorName;
-private String FleetKey;
-private String CountryKey;
-private String ShipKey;
-private String AcademyKey;
-private String YearOfBorn;
-private String YearOfDeath;
+private String comandorID;
+private String comandorName;
+private String fleetKey;
+private String countryKey;
+private String shipKey;
+private String academyKey;
+private String yearOfBorn;
+private String yearOfDeath;
 
     public Comandors() {
     }
 
     public Comandors(String comandorID, String comandorName, String fleetKey, String countryKey, String shipKey, String academyKey, String yearOfBorn, String yearOfDeath) {
-        ComandorID = comandorID;
-        ComandorName = comandorName;
-        FleetKey = fleetKey;
-        CountryKey = countryKey;
-        ShipKey = shipKey;
-        AcademyKey = academyKey;
-        YearOfBorn = yearOfBorn;
-        YearOfDeath = yearOfDeath;
+        comandorID = comandorID;
+        comandorName = comandorName;
+        fleetKey = fleetKey;
+        countryKey = countryKey;
+        shipKey = shipKey;
+        academyKey = academyKey;
+        yearOfBorn = yearOfBorn;
+        yearOfDeath = yearOfDeath;
     }
 
     public Comandors(String comandorName, String fleetKey, String countryKey, String shipKey, String academyKey, String yearOfBorn, String yearOfDeath) {
-        ComandorName = comandorName;
-        FleetKey = fleetKey;
-        CountryKey = countryKey;
-        ShipKey = shipKey;
-        AcademyKey = academyKey;
-        YearOfBorn = yearOfBorn;
-        YearOfDeath = yearOfDeath;
+        comandorName = comandorName;
+        fleetKey = fleetKey;
+        countryKey = countryKey;
+        shipKey = shipKey;
+        academyKey = academyKey;
+        yearOfBorn = yearOfBorn;
+        yearOfDeath = yearOfDeath;
     }
 
 }

@@ -4,21 +4,21 @@ import lombok.Data;
 @Data
 
 public class Cities {
-    private String CityID;
-    private String CityName;
-    private String CountryKey;
+    private String cityID;
+    private String cityName;
+    private String countryKey;
 
     public Cities() {
     }
 
     public Cities(String cityID, String cityName, String countryKey) {
-        CityID = cityID;
-        CityName = cityName;
-        CountryKey = countryKey;
+        cityID = cityID;
+        cityName = cityName;
+        countryKey = countryKey;
     }
 
     public Cities(String cityName, String countryKey) {
-        CityName = cityName;
-        CountryKey = countryKey;
+        cityName = cityName;
+        countryKey = countryKey;
     }
 }

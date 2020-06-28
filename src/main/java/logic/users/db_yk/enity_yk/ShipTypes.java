@@ -6,18 +6,18 @@ import lombok.Data;
 
 
 public class ShipTypes {
-    private String ShipTypeID;
-    private String ShipType;
+    private String shipTypeID;
+    private String shipType;
 
     public ShipTypes() {
     }
 
     public ShipTypes(String shipTypeID, String shipType) {
-        ShipTypeID = shipTypeID;
-        ShipType = shipType;
+        shipTypeID = shipTypeID;
+        shipType = shipType;
     }
 
     public ShipTypes(String shipType) {
-        ShipType = shipType;
+        shipType = shipType;
     }
 }

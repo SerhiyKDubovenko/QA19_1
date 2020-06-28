@@ -9,7 +9,7 @@ import java.util.List;
 public class ShipsDAO_YKImpl implements ShipsDAO {
     @Override
     public List<Ships> getShipsList(Session session) {
-        List list = session.createQuery("from Ships").list();
+        List<Ships> list = session.createQuery("from Ships").list();
         session.close();
         return list;
     }
@@ -51,16 +51,16 @@ public class ShipsDAO_YKImpl implements ShipsDAO {
         );
 
         // ADD
-        Ships sh1 = new Ships("xxx","1","1","1","1","1","1","1","1","1","1");
-        new ShipsDAO_YKImpl().addShips(session, sh1);
+        /*Ships sh1 = new Ships("xxx","1","1","1","1","1","1","1","1","1","1");
+        new ShipsDAO_YKImpl().addShips(session, sh1);*/
 
         //UPDATE
-        Ships sh2 = new Ships("", "","","","","","","","","","","");
-        new ShipsDAO_YKImpl().updateShips(session, sh2);
+       Ships sh2 = new Ships(15, "","","","","","","","","","","");
+        /*new ShipsDAO_YKImpl().updateShips(session, sh2);*/
 
         //DELETE
-        new ShipsDAO_YKImpl().deleteShips(session, sh2);
-        session.close();
+        /*new ShipsDAO_YKImpl().deleteShips(session, sh2);
+        session.close();*/
 
     }
 

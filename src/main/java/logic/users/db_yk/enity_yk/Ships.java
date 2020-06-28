@@ -6,48 +6,49 @@ import lombok.Data;
 
 public class Ships {
 
-    private String ShipsID;
-    private String ShipsName;
-    private String CountryKey;
-    private String FleetKey;
-    private String CapitanKey;
-    private String ComandorKey;
-    private String TypeKey;
-    private String ShipyardKey;
-    private String Displacement;
-    private String Speed;
-    private String InstalledPower;
-    private String Complement;
+    private int shipsID;
+    private String shipsName;
+    private String countryKey;
+    private String fleetKey;
+    private String capitanKey;
+    private String comandorKey;
+    private String typeKey;
+    private String shipyardKey;
+    private String displacement;
+    private String speed;
+    private String installedPower;
+    private String complement;
 
     public Ships() {
     }
 
-    public Ships(String shipsID, String shipsName, String countryKey, String fleetKey, String capitanKey, String comandorKey, String typeKey, String shipyardKey, String displacement, String speed, String installedPower, String complement) {
-        ShipsID = shipsID;
-        ShipsName = shipsName;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
-        CapitanKey = capitanKey;
-        ComandorKey = comandorKey;
-        TypeKey = typeKey;
-        ShipyardKey = shipyardKey;
-        Displacement = displacement;
-        Speed = speed;
-        InstalledPower = installedPower;
-        Complement = complement;
+    public Ships(int shipsID, String shipsName, String countryKey, String fleetKey, String capitanKey, String comandorKey, String typeKey, String shipyardKey, String displacement, String speed, String installedPower, String complement) {
+        shipsID = shipsID;
+        shipsName = shipsName;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
+        capitanKey = capitanKey;
+        comandorKey = comandorKey;
+        typeKey = typeKey;
+        shipyardKey = shipyardKey;
+        displacement = displacement;
+        speed = speed;
+        installedPower = installedPower;
+        complement = complement;
     }
 
     public Ships(String shipsName, String countryKey, String fleetKey, String capitanKey, String comandorKey, String typeKey, String shipyardKey, String displacement, String speed, String installedPower, String complement) {
-        ShipsName = shipsName;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
-        CapitanKey = capitanKey;
-        ComandorKey = comandorKey;
-        TypeKey = typeKey;
-        ShipyardKey = shipyardKey;
-        Displacement = displacement;
-        Speed = speed;
-        InstalledPower = installedPower;
-        Complement = complement;
+        shipsName = shipsName;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
+        capitanKey = capitanKey;
+        comandorKey = comandorKey;
+        typeKey = typeKey;
+        shipyardKey = shipyardKey;
+        displacement = displacement;
+        speed = speed;
+        installedPower = installedPower;
+        complement = complement;
     }
+
 }

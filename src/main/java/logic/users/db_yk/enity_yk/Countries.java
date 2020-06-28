@@ -4,18 +4,18 @@ import lombok.Data;
 
 @Data
 public class Countries {
-private String CountryID;
-private String Country;
+private String countryID;
+private String country;
 
     public Countries() {
     }
 
     public Countries(String countryID, String country) {
-        CountryID = countryID;
-        Country = country;
+        countryID = countryID;
+        country = country;
     }
 
     public Countries(String country) {
-        Country = country;
+        country = country;
     }
 }

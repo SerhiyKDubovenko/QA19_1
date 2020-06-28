@@ -15,14 +15,15 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            Configuration configuration = new Configuration();
-            configuration.configure();
+
+          /*  Configuration configuration = new Configuration();
+            configuration.configure("C:\\Users\\User\\IdeaProjects\\QA19_1\\src\\main\\resources\\hibernate.cfg.YK.xml");
 
             serviceRegistry = new ServiceRegistryBuilder()
                     .applySettings(configuration.getProperties())
-                    .buildServiceRegistry();
+                    .buildServiceRegistry();*/
 
-            return configuration.buildSessionFactory(serviceRegistry);
+            return  new Configuration().configure("hibernate.cfg.YK.xml").buildSessionFactory();
         }
         catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);

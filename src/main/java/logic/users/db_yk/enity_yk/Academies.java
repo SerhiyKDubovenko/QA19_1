@@ -8,56 +8,26 @@ import lombok.Data;
 
 @Data
 public class Academies {
-    private String  AcademyID;
-    private String  AcademyName;
-    private String CountryKey;
-    private String CityKey;
+    private String  academyID;
+    private String  academyName;
+    private String countryKey;
+    private String cityKey;
 
     public Academies() {
     }
 
     public Academies(String academyID, String academyName, String countryKey, String cityKey) {
-        AcademyID = academyID;
-        AcademyName = academyName;
-        CountryKey = countryKey;
-        CityKey = cityKey;
+        academyID = academyID;
+        academyName = academyName;
+        countryKey = countryKey;
+        cityKey = cityKey;
     }
 
     public Academies(String academyName, String countryKey, String cityKey) {
-        AcademyName = academyName;
-        CountryKey = countryKey;
-        CityKey = cityKey;
-    }
-    public String getAcademyID() {
-        return AcademyID;
+        academyName = academyName;
+        countryKey = countryKey;
+        cityKey = cityKey;
     }
 
-    public void setAcademyID(String academyID) {
-        AcademyID = academyID;
-    }
-
-    public String getAcademyName() {
-        return AcademyName;
-    }
-
-    public void setAcademyName(String academyName) {
-        AcademyName = academyName;
-    }
-
-    public String getCountryKey() {
-        return CountryKey;
-    }
-
-    public void setCountryKey(String countryKey) {
-        CountryKey = countryKey;
-    }
-
-    public String getCityKey() {
-        return CityKey;
-    }
-
-    public void setCityKey(String cityKey) {
-        CityKey = cityKey;
-    }
 
 }

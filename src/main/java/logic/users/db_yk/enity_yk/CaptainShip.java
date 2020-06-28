@@ -4,24 +4,24 @@ import lombok.Data;
 @Data
 
 public class CaptainShip {
-    private String CaptainID;
-    private String CaptainName;
-    private String CountryKey;
-    private String FleetKey;
+    private String captainID;
+    private String captainName;
+    private String countryKey;
+    private String fleetKey;
 
     public CaptainShip() {
     }
 
     public CaptainShip(String captainID, String captainName, String countryKey, String fleetKey) {
-        CaptainID = captainID;
-        CaptainName = captainName;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
+        captainID = captainID;
+        captainName = captainName;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
     }
 
     public CaptainShip(String captainName, String countryKey, String fleetKey) {
-        CaptainName = captainName;
-        CountryKey = countryKey;
-        FleetKey = fleetKey;
+        captainName = captainName;
+        countryKey = countryKey;
+        fleetKey = fleetKey;
     }
 }

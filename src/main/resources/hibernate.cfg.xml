@@ -14,4 +14,6 @@
     <mapping resource="hibernate/mapping/Movies.hbm.xml" />
 
 </session-factory>
+
+
 </hibernate-configuration>

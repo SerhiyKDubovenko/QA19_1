@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="logic.users.db_yk.enity_yk.Ships" table="Ships" catalog="u401146528_KYI04">
+
+        <id name="shipsID" type="java.lang.Integer">
+            <column name="ShipsID" />
+            <generator class="identity" />
+        </id>
+
+        <property name="shipsName" type="string">
+            <column name="ShipsName" length="225" not-null="true" />
+        </property>
+
+        <property name="CountryKey" type="string">
+            <column name="countryKey" length="225" not-null="true" />
+        </property>
+
+        <property name="fleetKey" type="string">
+            <column name="FleetKey" length="225" not-null="true" />
+        </property>
+
+        <property name="capitanKey" type="string">
+            <column name="CapitanKey" length="225" not-null="true" />
+        </property>
+
+        <property name="comandorKey" type="string">
+            <column name="ComandorKey" length="225" not-null="true" />
+        </property>
+
+        <property name="typeKey" type="string">
+            <column name="TypeKey" length="225" not-null="true" />
+        </property>
+
+        <property name="shipyardKey" type="string">
+            <column name="ShipyardKey" length="225" not-null="true" />
+        </property>
+
+        <property name="displacement" type="string">
+            <column name="Displacement" length="225" not-null="true" />
+        </property>
+
+        <property name="speed" type="string">
+            <column name="Speed" length="225" not-null="true" />
+        </property>
+
+        <property name="installedPower" type="string">
+            <column name="InstalledPower" length="225" not-null="true" />
+        </property>
+
+        <property name="complement" type="string">
+            <column name="Complement" length="225" not-null="true" />
+        </property>
+
+    </class>
+</hibernate-mapping>

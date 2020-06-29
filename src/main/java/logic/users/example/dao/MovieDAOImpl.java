@@ -54,11 +54,11 @@ public class MovieDAOImpl implements MovieDAO {
         );
 
         // ADD
-        Movies m1 = new Movies("test", 1, 3, 120, 125, 500, 37, 17, 2005);
+       // Movies m1 = new Movies("test", 1, 3, 120, 125, 500, 37, 17, 2005);
       //  new MovieDAOImpl().addMovie(session, m1);
 
         //UPDATE
-        Movies m2 = new Movies(21, "test", 1, 3, 140, 125, 500, 37, 17, 2005);
+        //Movies m2 = new Movies(21, "test", 1, 3, 140, 125, 500, 37, 17, 2005);
       //    new MovieDAOImpl().updateMovie(session, m2);
 
         //DELETE

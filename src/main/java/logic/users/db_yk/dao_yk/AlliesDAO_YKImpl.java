@@ -18,7 +18,7 @@ public class AlliesDAO_YKImpl  extends BaseDAO_YK implements AlliesDAO{
             statement.execute("select AllieID, CoalitionKey, CountryKey, FromDate, ToDate from Allies");
             ResultSet rs = statement.getResultSet();
             while (rs.next()) {
-                alliesList.add(new Allies(rs.getString("AllieID"),
+                alliesList.add(new Allies(rs.getInt("AllieID"),
                         rs.getString("CoalitionKey"),
                         rs.getString("CountryKey"),
                         rs.getString("FromDate"),
@@ -31,7 +31,7 @@ public class AlliesDAO_YKImpl  extends BaseDAO_YK implements AlliesDAO{
     }
 
     public boolean updateAllies(Allies allies) {
-        Allies alliesForUpdate  =getAlliesList().stream().filter(o ->o.getAllieID().contains(allies.getCoalitionKey()))
+        Allies alliesForUpdate  =getAlliesList().stream().filter(o ->o.getCoalitionKey().contains(allies.getCoalitionKey()))
                 .filter(o -> o.getCountryKey().contains(allies.getCountryKey()))
                 .findFirst().get();
         try {
@@ -45,7 +45,7 @@ public class AlliesDAO_YKImpl  extends BaseDAO_YK implements AlliesDAO{
 
     public boolean deleteAllies(Allies allies) {
 
-        Allies alliesForDelete  =getAlliesList().stream().filter(o ->o.getAllieID().contains(allies.getAllieID()))
+        Allies alliesForDelete  =getAlliesList().stream().filter(o ->o.getCoalitionKey().contains(allies.getCoalitionKey()))
                 .filter(o -> o.getCountryKey().contains(allies.getCountryKey()))
                 .findFirst().get();
 
@@ -56,7 +56,7 @@ public class AlliesDAO_YKImpl  extends BaseDAO_YK implements AlliesDAO{
             e.printStackTrace();
         }
 
-        return getAlliesList().stream().filter(o ->o.getAllieID().contains(allies.getAllieID()))
+        return getAlliesList().stream().filter(o ->o.getCoalitionKey().contains(allies.getCoalitionKey()))
                 .filter(o -> o.getCountryKey().contains(allies.getCountryKey()))
                 .findFirst().isPresent();
     }
@@ -68,7 +68,7 @@ public class AlliesDAO_YKImpl  extends BaseDAO_YK implements AlliesDAO{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return getAlliesList().stream().filter(o ->o.getAllieID().contains(allies.getAllieID()))
+        return getAlliesList().stream().filter(o ->o.getCoalitionKey().contains(allies.getCoalitionKey()))
                 .filter(o -> o.getCountryKey().contains(allies.getCountryKey()))
                 .findFirst().isPresent();
     }

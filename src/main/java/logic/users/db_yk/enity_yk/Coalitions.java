@@ -4,13 +4,13 @@ import lombok.Data;
 @Data
 
 public class Coalitions {
-    private String CoalitionID;
+    private int CoalitionID;
     private String Coalition;
 
     public Coalitions() {
     }
 
-    public Coalitions(String coalitionID, String coalition) {
+    public Coalitions(int coalitionID, String coalition) {
         CoalitionID = coalitionID;
         Coalition = coalition;
     }

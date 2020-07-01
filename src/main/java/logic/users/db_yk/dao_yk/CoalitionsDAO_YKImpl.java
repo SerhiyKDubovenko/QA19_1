@@ -18,7 +18,7 @@ public class CoalitionsDAO_YKImpl extends BaseDAO_YK implements CoalitionsDAO{
             statement.execute("select CoalitionID, Coalition  from Coalitions");
             ResultSet rs = statement.getResultSet();
             while (rs.next()) {
-                coalitionsList.add(new Coalitions(rs.getString("CoalitionID"),
+                coalitionsList.add(new Coalitions(rs.getInt("CoalitionID"),
                         rs.getString("Coalition")));
             }
         } catch (SQLException e) {

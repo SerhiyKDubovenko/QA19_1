@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 
 public class SeaBattles {
-    private String SeaBattlesID;
+    private int SeaBattlesID;
     private String SeaBattles;
     private String CoanflictKey;
     private String CoalitionKey;
@@ -17,7 +17,7 @@ public class SeaBattles {
     public SeaBattles() {
     }
 
-    public SeaBattles(String seaBattlesID, String seaBattles, String coanflictKey, String coalitionKey, String countryKey, String fleetKey, String year, String winner) {
+    public SeaBattles(int seaBattlesID, String seaBattles, String coanflictKey, String coalitionKey, String countryKey, String fleetKey, String year, String winner) {
         SeaBattlesID = seaBattlesID;
         SeaBattles = seaBattles;
         CoanflictKey = coanflictKey;

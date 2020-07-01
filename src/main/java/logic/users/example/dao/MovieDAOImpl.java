@@ -2,8 +2,8 @@ package logic.users.example.dao;
 
 import logic.users.persistence.HibernateUtil;
 import logic.users.example.enity.Movies;
-import org.hibernate.Session;
 
+import org.hibernate.Session;
 import java.util.List;
 
 /**

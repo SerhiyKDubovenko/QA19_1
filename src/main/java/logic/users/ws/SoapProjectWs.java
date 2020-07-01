@@ -2,10 +2,8 @@ package logic.users.ws;
 
 import com.google.gson.Gson;
 import logic.users.example.dao.ActorDAOImpl;
-import logic.users.example.dao.MovieDAOImpl;
 import logic.users.example.enity.Actor;
 import logic.users.example.enity.Hello;
-import logic.users.example.enity.Movies;
 import logic.users.persistence.HibernateUtil;
 import org.hibernate.Session;
 import org.json.JSONObject;
@@ -32,10 +30,6 @@ public class SoapProjectWs implements SoapProject{
             return new Gson().toJson(new Hello(false, "Hello, " + name + "!")).toString();
         }
     }
-
-
-
-
 
     public String addActor(@WebParam(name = "name") @XmlElement(required=true, nillable=false) String name,
                            @WebParam(name = "midlename") @XmlElement(required=true, nillable=false) String midlename,

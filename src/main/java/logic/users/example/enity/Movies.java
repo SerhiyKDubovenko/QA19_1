@@ -1,21 +1,47 @@
 package logic.users.example.enity;
 
-import logic.users.example.dao.MovieDAO;
 import lombok.Data;
 
-@Data
-public class Movies  {
+import javax.persistence.*;
 
-    // MovieID, Movies, DirectorKey, StudioKey, RunningTime, Budget, BoxOffice, CountryKey, LanguageKey, Year
+
+/**
+ * @author Serhiy Dubovenko
+ */
+@Data
+@Entity
+@Table(name="Movies")
+public class Movies {
+
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="MovieID")
     private int id;
+
+    @Column(name="Movies")
     private String movies;
+
+    @Column(name="DirectorKey")
     private int directorKey;
+
+    @Column(name="StudioKey")
     private int studioKey;
+
+    @Column(name="RunningTime")
     private int runningTime;
+
+    @Column(name="Budget")
     private int budget;
+
+    @Column(name="BoxOffice")
     private int boxOffice;
+
+    @Column(name="CountryKey")
     private int countryKey;
+
+    @Column(name="LanguageKey")
     private int languageKey;
+
+    @Column(name="Year")
     private int year;
 
     public Movies() {

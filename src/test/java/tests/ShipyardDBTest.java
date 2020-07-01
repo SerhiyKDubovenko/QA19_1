@@ -22,7 +22,7 @@ public class ShipyardDBTest {
 
     }
 
-    @Test
+    /*@Test
     public void test01_GetShipyardsListTest(){
         assertThat(new ShipyardDAO_YKImpl().getShipyardsList().size(), greaterThan(0));
     }
@@ -43,5 +43,5 @@ public class ShipyardDBTest {
     public void test04_deleteShipyardTest(){
         Shipyard shipyard = new Shipyard("Ocean", "131", "15");
         assertThat(new ShipyardDAO_YKImpl().deleteShipyard(shipyard), is(false));
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 package logic.users.example.dao;
 
-import logic.users.HibernateUtil;
+import logic.users.persistence.HibernateUtil;
 import logic.users.example.enity.Movies;
 import org.hibernate.Session;
 
@@ -17,6 +17,8 @@ public class MovieDAOImpl implements MovieDAO {
         session.close();
         return list;
     }
+
+
 
     @Override
     public void updateMovie(Session session, Movies movies) {

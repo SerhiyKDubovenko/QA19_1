@@ -2,6 +2,8 @@ package logic.users.example.dao;
 
 import logic.users.example.ConnectionManager;
 import logic.users.example.enity.Actor;
+import logic.users.example.enity.Movies;
+import org.hibernate.Session;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -31,6 +33,8 @@ public class ActorDAOImpl extends BaseDAO implements ActorDAO {
         }
         return actorList;
     }
+
+
 
     public boolean updateActor(Actor actor) {
         Actor actorForUpdate  =getActorsList().stream().filter(o ->o.getName().contains(actor.getName()))
@@ -73,8 +77,19 @@ public class ActorDAOImpl extends BaseDAO implements ActorDAO {
         return getActorsList().stream().filter(o ->o.getName().contains(actor.getName()))
                 .filter(o -> o.getSurname().contains(actor.getSurname()))
                 .findFirst().isPresent();
-
     }
 
+    @Override
+    public void addActorJPA(Session session, Actor actor) {
+        session.beginTransaction();
+        session.save(actor);
+        session.getTransaction().commit();
+    }
 
+    @Override
+    public List<Actor> getActorsJPA(Session session) {
+        List<Actor> list = session.createQuery("from Actor").list();
+        session.close();
+        return list;
+    }
 }

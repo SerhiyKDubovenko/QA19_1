@@ -24,7 +24,7 @@ public class ActorDBTest {
 
     }
 
-    @Test
+  /*  @Test
     public void test01_GetActorsListTest(){
         assertThat(new ActorDAOImpl().getActorsList().size(), greaterThan(0));
     }
@@ -45,5 +45,5 @@ public class ActorDBTest {
     public void test04_deleteActorTest(){
         Actor actor = new Actor("Carlos", "Ray 'Chuck'", "Norris", "1940", "150");
         assertThat(new ActorDAOImpl().deleteActor(actor), is(false));
-    }
+    }*/
 }

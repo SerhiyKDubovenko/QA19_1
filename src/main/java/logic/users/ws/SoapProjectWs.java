@@ -12,6 +12,7 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlElement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,45 +20,50 @@ import java.util.List;
  */
 @WebService(name = "SoapProjectWs")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
-public class SoapProjectWs implements SoapProject{
+public class SoapProjectWs implements SoapProject {
 
-    public String sayHello(@WebParam(name = "name") @XmlElement(required=true, nillable=false) String name) {
+    public String sayHello(@WebParam(name = "name") @XmlElement(required = true, nillable = false) String name) {
 
         JSONObject response = null;
-        if (name == null || name.length()==0) {
+        if (name == null || name.length() == 0) {
             return new Gson().toJson(new Hello(false, "Hello")).toString();
-        }else{
+        } else {
             return new Gson().toJson(new Hello(false, "Hello, " + name + "!")).toString();
         }
     }
 
-    public String addActor(@WebParam(name = "name") @XmlElement(required=true, nillable=false) String name,
-                           @WebParam(name = "midlename") @XmlElement(required=true, nillable=false) String midlename,
-                           @WebParam(name = "surname") @XmlElement(required=true, nillable=false) String surname,
-                           @WebParam(name = "yearOfBirth") @XmlElement(required=true, nillable=false) String yearOfBirth,
-                           @WebParam(name = "countryKey") @XmlElement(required=true, nillable=false) String countryKey) {
+    public String addActor(@WebParam(name = "name") @XmlElement(required = true, nillable = false) String name,
+                           @WebParam(name = "midlename") @XmlElement(required = true, nillable = false) String midlename,
+                           @WebParam(name = "surname") @XmlElement(required = true, nillable = false) String surname,
+                           @WebParam(name = "yearOfBirth") @XmlElement(required = true, nillable = false) String yearOfBirth,
+                           @WebParam(name = "countryKey") @XmlElement(required = true, nillable = false) String countryKey) {
+
+        List<Actor> listOfActors = new ArrayList<>();
+        Actor newActor = new Actor(name, midlename, surname, yearOfBirth, countryKey);
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         ActorDAOImpl aDAOImpl = new ActorDAOImpl();
-        Actor newActor = new Actor(name, midlename, surname, yearOfBirth, countryKey);
         aDAOImpl.addActorJPA(session, newActor);
-        List<Actor> listOfActors = aDAOImpl.getActorsJPA(session);
-        HibernateUtil.shutdown();
+        listOfActors = aDAOImpl.getActorsJPA(session);
+
 
         JSONObject response = null;
         if (!listOfActors.contains(newActor)) {
             response = new JSONObject();
             response.put("success", false);
-            response.put("message", "The Actor "+newActor.getName()+ " "+newActor.getSurname()+" has not been found.");
+            response.put("message", "The Actor " + newActor.getName() + " " + newActor.getSurname() + " has not been found.");
             return response.toString();
-        }else{
+        } else {
             response = new JSONObject();
             response.put("success", true);
-            response.put("message",  "Success!. The actor has been added.");
+            response.put("message", "Success!. The actor has been added.");
         }
-        return  response.toString();
+        return response.toString();
     }
 
 
+    public static void main(String[] args) {
+        new SoapProjectWs().addActor("ewewr", "32ew", "wewerwe", "1958", "130");
+    }
 
 }

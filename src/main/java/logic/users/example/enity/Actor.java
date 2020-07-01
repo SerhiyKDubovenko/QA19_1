@@ -2,17 +2,31 @@ package logic.users.example.enity;
 
 import lombok.Data;
 
-@Data
+import javax.persistence.*;
 
+@Data
+@Entity
+@Table(name = "Actor")
 public class Actor {
 
     // ActorID, Name, Midlename, Surname, YearOfBirth, CountryKey
-
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="ActorID")
     private String  actorID;
+
+    @Column(name = "Name")
     private String  Name;
+
+    @Column(name = "Midlename")
     private String midlename;
+
+    @Column(name = "Surname")
     private String surname;
+
+    @Column(name = "YearOfBirth")
     private String yearOfBirth;
+
+    @Column(name = "CountryKey")
     private String countryKey;
 
     public Actor() {

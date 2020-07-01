@@ -12,6 +12,7 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <mapping class="logic.users.example.enity.Movies" />
+        <mapping class="logic.users.example.enity.Actor" />
 
     </session-factory>
 </hibernate-configuration>

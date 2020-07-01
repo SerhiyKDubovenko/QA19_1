@@ -17,4 +17,10 @@ public interface SoapProject {
     @WebMethod
     String sayHello(@WebParam(name = "name") @XmlElement(required=true, nillable=false) String name);
 
+    @WebMethod
+    String addActor(@WebParam(name = "name") @XmlElement(required=true, nillable=false) String name,
+                    @WebParam(name = "midlename") @XmlElement(required=true, nillable=false) String midlename,
+                    @WebParam(name = "surname") @XmlElement(required=true, nillable=false) String surname,
+                    @WebParam(name = "yearOfBirth") @XmlElement(required=true, nillable=false) String yearOfBirth,
+                    @WebParam(name = "countryKey") @XmlElement(required=true, nillable=false) String countryKey);
 }

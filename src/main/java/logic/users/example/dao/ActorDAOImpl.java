@@ -89,7 +89,6 @@ public class ActorDAOImpl extends BaseDAO implements ActorDAO {
     @Override
     public List<Actor> getActorsJPA(Session session) {
         List<Actor> list = session.createQuery("from Actor").list();
-        session.close();
         return list;
     }
 }
